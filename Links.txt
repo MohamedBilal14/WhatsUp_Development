@@ -5,3 +5,5 @@ https://ehec.fa.em2.oraclecloud.com/hcmUI/faces/FuseWelcome?_adf.ctrl-state=neii
 https://ehec.fa.em2.oraclecloud.com/hcmUI/faces/deeplink?objType=WLF_LEARN_OFFERING_ITEM&action=NONE&objKey=learningItemId%3D300000576186381
 
 https://ehec.fa.em2.oraclecloud.com/hcmUI/faces/deeplink?objType=WLF_LEARN_OFFERING_ITEM&action=NONE&objKey=learningItemId%3D300000806403641
+
+new link
