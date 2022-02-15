@@ -1,0 +1,50 @@
+ package com.Adactin.StepDefinition;
+
+import org.openqa.selenium.WebDriver;
+
+import com.BaseClass.Base_Class;
+import com.pom.PageObjectManager;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class Step_Definition extends Base_Class {
+	
+	public static WebDriver driver;
+	public static PageObjectManager pom = new PageObjectManager(driver);
+	
+	
+	@Given("^User Launch The Application$")
+	public void user_Launch_The_Application() throws Throwable {
+		
+		driver= getBrowser("chrome");
+		
+		getUrl("http://adactinhotelapp.com/index.php");
+	    
+	}
+
+	@When("^User Entering The Valid Username In Username Field$")
+	public void user_Entering_The_Valid_Username_In_Username_Field() throws Throwable {
+		
+		inputValueElement(pom.getInstanceLp().getUsername(),"mohamedbilal");
+	  
+	}
+
+	@When("^User Entering The Valid Password In Password Field$")
+	public void user_entering_the_valid_password_in_password_field() throws Throwable {
+		
+		inputValueElement(pom.getInstanceLp().getPassword(),"3Q1A52");
+	   
+	}
+
+	@Then("^User Click On The Login Button And It Navigates To Homepage$")
+	public void user_click_on_the_login_button_and_it_navigates_to_homepage() throws Throwable {
+		
+		clickOnElement(pom.getInstanceLp().getLoginbtn());
+		
+		close();
+	    
+	}
+
+}
